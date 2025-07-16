@@ -6,3 +6,6 @@ node_modules
 # Environment files with secrets
 .env
 .env.local
+
+# NPM configuration with tokens (keep local, don't commit)
+.npmrc
