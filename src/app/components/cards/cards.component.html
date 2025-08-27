@@ -1,0 +1,346 @@
+<div class="container-fluid mt-3">
+
+  <h2 class="title-high">Cards</h2>
+
+<p>Images in cards are descoped until the responsive piece can be implemented.</p>
+<p class="body-high-default text-danger my-5">Dividers do not display in cards. Lists do not display in cards (?)</p>
+
+<p class="body-high-default text-danger my-5">If default is flat and glass is appearance="outlined", then what is raised?</p>
+<p class="body-high-default text-danger my-5">Hover colors differ between outlined and raised and LM and DM</p>
+
+<div class="row mb-5">
+
+  <div class="col-sm-3">
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Non-interactive</mat-card-title>
+        <mat-card-subtitle>Outline</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="text-danger">
+        Outline doesn't display in LM
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Share</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col-sm-3">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Non-interactive</mat-card-title>
+        <mat-card-subtitle>"no appearance" tag</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-danger">Defaults to raised in LM and disappears in DM</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button>Hide</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="col-sm-4">
+    <a href="#" class="mat-card-wrapper mat-card-wrapper--outlined">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Interactive</mat-card-title>
+          <mat-card-subtitle>outlined</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-danger">No outline in LM?</p>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </div>
+
+  <div class="col-sm-2">
+    <a href="#" class="mat-card-wrapper">
+      <mat-card appearance="raised">
+        <mat-card-header>
+          <mat-card-title>Interactive cards</mat-card-title>
+          <mat-card-subtitle>raised</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-danger">Not raised in DM</p>
+        </mat-card-content>
+      </mat-card>
+      </a>
+  </div>
+</div>
+
+  <!--Interactive-->
+  <!--Two columns, small up
+  <div class="row row-cols-1 row-cols-sm-2 mb-5">
+    <div class="col">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card appearance="raised">
+          <mat-card-header>
+            <mat-card-title>Interactive card</mat-card-title>
+            <mat-card-subtitle class="text-danger">Image not reading .img-fluid</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#" class="mat-card-wrapper mat-card-wrapper--outlined">
+        <mat-card appearance="outlined">
+          <mat-card-header>
+            <mat-card-title>Interactive card</mat-card-title>
+            <mat-card-subtitle class="text-danger">card should not fill entire column?</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="text-danger">Why two outlined classes here? .mat-card-wrapper and  .mat-card-wrapper--outlined?</p>
+            <p class="text-danger">And the raised class has no additional "raised" wrapper but plain mat-card-wrapper?</p>  </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div> -->
+
+  <!--Non-Interactive-->
+  <!--Three columns, medium up; in small breakpoint, card layout goes landscape-->
+  <div class="row row-cols-1 row-cols-md-3 mb-5">
+    <div class="col">
+      <mat-card class="mat-mdc-card--landscape-sm">
+          <mat-card-header>
+            <mat-card-title>Card title</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="text-danger">
+      Card shouldn't fill entire column
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary">Action 1</button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col">
+      <mat-card class="mat-mdc-card--landscape-sm">
+          <mat-card-header>
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-subtitle class="text-danger">Not responsive</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+            <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+            <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-stroked-button>Action 2</button>
+            <button mat-flat-button>Action 1</button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+     <div class="col">
+      <mat-card class="mat-mdc-card--landscape-sm">
+          <mat-card-header>
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-subtitle>Subheading</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-stroked-button>Action 2</button>
+            <button mat-flat-button>Action 1</button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <!--Interactive; landscape-->
+  <!--Two columns, small up-->
+  <div class="row row-cols-1 row-cols-sm-2 mb-5">
+    <div class="col">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card class="mat-mdc-card--landscape">
+            <mat-card-header>
+              <mat-card-title>Short card title</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+              <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+              <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+            </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card class="mat-mdc-card--landscape">
+          <div>
+            <mat-card-header>
+              <mat-card-title>Short card title</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+            </mat-card-content>
+          </div>
+        </mat-card>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card class="mat-mdc-card--landscape">
+          <div>
+            <mat-card-header>
+              <mat-card-title>Short card title</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+            </mat-card-content>
+          </div>
+        </mat-card>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card class="mat-mdc-card--landscape">
+            <mat-card-header>
+              <mat-card-title>Short card title</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+            </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mb-5">
+    <div class="col">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Card title</mat-card-title>
+          <mat-card-subtitle>Subheading</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary">Action 1</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Card title</mat-card-title>
+          <mat-card-subtitle>Subheading</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-stroked-button>Action 1</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Card title</mat-card-title>
+          <mat-card-subtitle>Subheading</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Elaborate on the card's topic using concise supporting text</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary">Action 1</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col">
+      <mat-card>
+        <img mat-card-image src="/assets/images/shiba2.jpg" alt="Card image" class="img-fluid">
+        <mat-card-header>
+          <mat-card-title>Card title</mat-card-title>
+          <mat-card-subtitle>Subheading</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Elaborate on the card's topic using concise supporting text</p>
+          <p>Elaborate on the card's topic using concise supporting text</p>
+          <p>Elaborate on the card's topic using concise supporting text</p>
+          <p>Elaborate on the card's topic using concise supporting text</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary">Action 1</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <!--Interactive-->
+  <!--8/4, medium up-->
+  <div class="row mb-5">
+    <div class="col col-12 col-md-8">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card>
+          <img mat-card-image src="/assets/images/shiba2.jpg" alt="Card image" class="img-fluid">
+          <mat-card-header>
+            <mat-card-title>Long card title</mat-card-title>
+            <mat-card-subtitle>Subheading</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </a>
+    </div>
+    <div class="col col-12 col-md-4">
+      <a href="#" class="mat-card-wrapper">
+        <mat-card>
+          <img mat-card-image src="/assets/images/shiba2.jpg" alt="Card image" class="img-fluid">
+          <mat-card-header>
+            <mat-card-title>Card title</mat-card-title>
+            <mat-card-subtitle>Subheading</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Explain more about the topic shown in the card title and subheading through short supporting text here.</p>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="col-md-4">
+      <mat-card appearance="raised">
+        <mat-card-header>
+          <mat-card-title>non-Interactive</mat-card-title>
+          <mat-card-subtitle>raised</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-danger">
+          Shouldn't this card fit to content?
+         </mat-card-content>
+      </mat-card>
+ </div>
+
+  <div class="col-md-4">
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>non-Interactive</mat-card-title>
+        <mat-card-subtitle>outlined</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="text-danger">
+       Shouldn't this card fit to content?
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-md-4">
+    <mat-card appearance="outlined">
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" class="img-fluid">
+      <mat-card-header>
+        <mat-card-title>Non-interactive</mat-card-title>
+        <mat-card-subtitle>outlined</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-danger">
+          Responsive image not working.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button>Like</button>
+        <button mat-flat-button>Share</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+
+</div>

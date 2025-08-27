@@ -1,0 +1,223 @@
+<div class="d-flex">
+  <div style="padding-left: 24px; padding-top: 24px" class="align-items-end">
+    <mat-icon svgIcon="icon-error"></mat-icon>
+  </div>
+
+  <div style="padding-right: 6px; margin-top: 6px;" class="align-items-end ms-auto">
+    <button mat-icon-button color="primary" mat-dialog-close="true">
+      <mat-icon svgIcon="icon-close"></mat-icon>
+    </button>
+  </div>
+</div>
+
+<h2 mat-dialog-title class="title-high">Icon colors in buttons</h2>
+<mat-dialog-content>
+
+  <section>
+    <h5>Text/Basic</h5>
+    <div class="button-row">
+      <button mat-button>Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a rel="noopener" mat-button href="#" target="_blank">Link</a>
+      <button mat-button color="accent">
+        <mat-icon iconPositionEnd svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+      <button mat-button routerLink="/">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-button color="warn">
+        <mat-icon iconPositionEnd svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+      <button mat-button color="warn" routerLink="/">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+    </div>
+  </section>
+
+  <section>
+
+<mat-divider  />
+    <div class="button-row">
+      <button mat-stroked-button>Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a rel="noopener" mat-stroked-button href="#" target="_blank">Link</a>
+
+      <button mat-stroked-button color="accent">
+        <mat-icon iconPositionEnd svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-stroked-button routerLink="/">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-stroked-button color="warn">
+        <mat-icon iconPositionEnd svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-stroked-button color="warn" routerLink="/">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+    </div>
+  </section>
+
+  <section>
+    <h5>Filled/Flat</h5>
+    <div class="button-row">
+      <button mat-flat-button>Primary</button>
+      <button mat-flat-button color="accent">Accent</button>
+      <button mat-flat-button color="warn">Warn</button>
+      <button mat-flat-button disabled>Disabled</button>
+      <a rel="noopener" mat-flat-button href="#" target="_blank">Link</a>
+
+      <button mat-flat-button color="accent" routerLink="/">
+        <mat-icon iconPositionEnd svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-flat-button routerLink="/">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-flat-button color="warn" routerLink="/">
+        <mat-icon iconPositionEnd svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+      <button mat-flat-button color="warn" routerLink="/">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>Share the love
+      </button>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h5>Icon</h5>
+    <div class="button-row">
+
+      <button mat-icon-button color="primary">
+        <mat-icon svgIcon="icon-info"></mat-icon>
+      </button>
+
+      <button mat-icon-button color="primary">
+        <mat-icon svgIcon="icon-info-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button class="filled-primary" color="primary">
+        <mat-icon svgIcon="icon-info-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button class="filled-primary" color="primary">
+        <mat-icon svgIcon="icon-info"></mat-icon>
+      </button>
+
+      <button mat-icon-button color="accent">
+        <mat-icon svgIcon="icon-home-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button color="accent">
+        <mat-icon svgIcon="icon-home"></mat-icon>
+      </button>
+
+      <button mat-icon-button class="filled-accent" color="accent">
+        <mat-icon svgIcon="icon-home-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button class="filled-accent" color="accent">
+        <mat-icon svgIcon="icon-home"></mat-icon>
+      </button>
+
+      <button mat-icon-button color="warn">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button color="warn">
+        <mat-icon svgIcon="icon-favorite"></mat-icon>
+      </button>
+
+      <button mat-icon-button class="filled-warn" color="warn">
+        <mat-icon svgIcon="icon-favorite-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button class="filled-warn" color="warn">
+        <mat-icon svgIcon="icon-favorite"></mat-icon>
+      </button>
+
+      <button mat-icon-button disabled>
+        <mat-icon svgIcon="icon-open-in-new-filled"></mat-icon>
+      </button>
+
+      <button mat-icon-button disabled color="primary" class="filled-primary">
+        <mat-icon svgIcon="icon-open-in-new"></mat-icon>
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- <button mat-stroked-button color="primary">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>Share the love
+  </button>
+
+    <button mat-flat-button color="primary">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>Share the love
+  </button>
+
+  <button mat-stroked-button color="accent">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>Share the love
+  </button>
+
+    <button mat-flat-button color="accent">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>Share the love
+  </button>
+
+  <button mat-stroked-button color="warn">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>Share the love
+  </button>
+
+  <button mat-flat-button color="warn">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>Share the love
+  </button>
+
+  <button mat-icon-button color="primary">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>
+  </button>
+
+    <button mat-icon-button class="accent" color="accent">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>
+  </button>
+
+    <button mat-icon-button class="warn" color="warn">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>
+  </button>
+
+   <button mat-icon-button class="filled-primary" color="primary">
+    <mat-icon svgIcon="icon-favorite-filled"></mat-icon>
+  </button>
+
+  <button mat-icon-button class="filled-accent" color="accent">
+    <mat-icon svgIcon="icon-favorite-filled"></mat-icon>
+  </button>
+
+    <button mat-icon-button class="filled-warn" color="warn">
+    <mat-icon svgIcon="icon-favorite"></mat-icon>
+  </button> -->
+
+  <p>Build features quickly with simple, declarative templates. Extend the template language with
+    your own components and use a wide array of existing components. </p>
+
+  <p>Get immediate Angular-specific
+    help and feedback with nearly every IDE and editor. All this comes together so you can focus
+    on building amazing apps rather than trying to make the code work.</p>
+
+</mat-dialog-content>
+
+<mat-dialog-actions class="d-flex">
+  <button class="me-auto" mat-button color="primary" mat-dialog-close="true">Tertiary</button>
+  <button mat-stroked-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button color="primary" mat-dialog-close iconPositionEnd svgIcon="icon-favorite-filled"
+    cdkFocusInitial>Install</button>
+</mat-dialog-actions>
