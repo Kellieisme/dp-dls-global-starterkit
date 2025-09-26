@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IconRegistryModule } from '@design/dls-global-angular/icon-registry';
-import { MatButtonModule, MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { BreadcrumbComponent } from "@design/dls-global-angular/breadcrumb";
+import { BreadcrumbComponent } from "@dasdigitalplatform/dls-angular/breadcrumb";
 import { ChipsComponent } from './chips/chips.component';
 import { DatepickerComponent } from "./datepicker/datepicker.component";
 import { CheckboxComponent } from './checkbox/checkbox.component';
@@ -16,7 +16,6 @@ import { SwitchComponent } from "./switch/switch.component";
 import { SideSheetComponent } from './sidesheet/sidesheet.component';
 import { InputComponent } from "./input/input.component";
 import { TableComponent } from "./tables/table/table.component";
-import { MatIcon } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 
 
@@ -25,7 +24,7 @@ export interface LabelExample {
 }
 @Component({
   selector: 'app-components',
-  imports: [MatDividerModule, IconRegistryModule, MatIcon, MatButtonModule, MatButton, BreadcrumbComponent, MatCardModule, ChipsComponent, DatepickerComponent, CheckboxComponent, ButtonsComponent, DialogContentExample, FormComponent, ListComponent, MenuComponent, SelectComponent, SwitchComponent, SideSheetComponent, InputComponent, TableComponent],
+  imports: [MatIcon, MatDividerModule, MatButtonModule, BreadcrumbComponent, MatCardModule, ChipsComponent, DatepickerComponent, CheckboxComponent, ButtonsComponent, DialogContentExample, FormComponent, ListComponent, MenuComponent, SelectComponent, SwitchComponent, SideSheetComponent, InputComponent, TableComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './components.component.html',
   styleUrl: './components.component.scss',
