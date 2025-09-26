@@ -1,1 +1,77 @@
+@use '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
 
+
+html,
+body {   height: 100vh; }
+
+body {
+background-color: var(--color-ui-background-lowest)
+}
+
+.display-dark {
+  .theme-light & {
+    display: none;
+  }
+}
+
+.display-light {
+  display: none;
+  .theme-light & {
+    display: block;
+  }
+}
+
+.mat-drawer-content {
+  background: var(--color-ui-background-low);
+}
+
+$enable-negative-margins: true;
+
+// .container-fluid {
+//   padding: $size-relaxed-spacing-4xl;
+// }
+
+//  .mat-mdc-tab-body-wrapper {
+//    padding-top: $size-relaxed-spacing-4xl;
+// }
+
+  .mat-mdc-tab-body-content {
+    overflow-x: hidden;
+  }
+
+  section {
+    &.section__cards {
+      a {
+        display: block;
+      }
+     // .col {
+      //   margin-bottom: $size-relaxed-spacing-xl;
+      // }
+      }
+    .mat-mdc-card-image {
+      max-height: 214px;
+    }
+  }
+
+  [mat-table] {
+    .status {
+      // @include typography-xl-body-low-highlight;
+      &--success {
+        color: var(--color-semantic-textandicon-success);
+      }
+      &--warning {
+        color: var(--color-semantic-textandicon-warning);
+      }
+    }
+  }
+
+
+
+
+
+
+
+ul.text-white {
+  list-style: disc;
+  margin-left: 1.5em;
+}
