@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Releases
 
-This project follows [Semantic Versioning](https://semver.org/). See [CHANGELOG.md](CHANGELOG.md) for release history.
+This project follows [Semantic Versioning](https://semver.org/). See [CHANGELOG.md](CHANGELOG.md) for release history and [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md) for detailed release instructions.
 
 ### Creating a Release
 
