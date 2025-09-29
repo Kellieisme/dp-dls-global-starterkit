@@ -24,12 +24,10 @@ import { DevicesComponent } from './template-4/devices.component';
 import { ComponentsComponent } from './components/components.component';
 import { Template3Component } from './template-3/template-3.component';
 import { Template2Component } from './template-2/template-2.component';
-import { VersionsComponent } from './versions/versions.component';
 
 
 export const routes: Routes = [
     { path: '', redirectTo: 'dash', pathMatch: 'full'},
-    { path: 'versions', component: VersionsComponent },
     { path: 'dash', component: DashComponent },
     { path: 'badge', component: BadgeComponent},
     { path: 'button', component: ButtonsComponent },
@@ -51,8 +49,10 @@ export const routes: Routes = [
     { path: 'switch', component: SwitchComponent },
     { path: 'input', component: InputComponent},
     { path: 'template-1', component: Template1Component },
+    { path: 'template-2', component: Template2Component },
+    { path: 'template-3', component: Template3Component },
     { path: 'template-4', component: DevicesComponent },
     { path: 'components', component: ComponentsComponent },
-    { path: 'template-3', component: Template3Component },
-    { path: 'template-2', component: Template2Component }
+
+
 ];

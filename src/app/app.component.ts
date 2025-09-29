@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { IconRegistryModule } from '@design/dls-global-angular/icon-registry';
+import { IconRegistryModule } from '@dasdigitalplatform/dls-angular/icon-registry';
 import { CommonModule } from '@angular/common';
-import { ThemeToggleModule } from '@design/dls-global-angular/theme-toggle';
+import { ThemeToggleModule } from '@dasdigitalplatform/dls-angular/theme-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MainNavComponent } from "./main-nav/main-nav.component";
 

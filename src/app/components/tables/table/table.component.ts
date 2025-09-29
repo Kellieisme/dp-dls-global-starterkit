@@ -130,8 +130,8 @@ const EXAMPLE_DATA: TableItem[] = [
     selector: 'app-table',
     templateUrl: './table.component.html',
     styleUrl: './table.component.scss',
-    imports: [MatCheckboxModule, MatSortHeader, MatButtonModule, MatFormFieldModule, MatTableModule,
-    MatSort, MatCardModule, MatToolbarModule, MatMenuModule, MatInputModule, MatIcon],
+    imports: [MatCheckboxModule, MatSortHeader, MatButtonModule, MatFormFieldModule, MatTableModule, MatPaginator,
+    MatSort, MatCardModule, MatToolbarModule, MatMenuModule, MatInputModule],
     standalone: true
 })
 export class TableComponent implements AfterViewInit {
