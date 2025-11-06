@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { IconRegistryModule } from '@dasdigitalplatform/dls-angular/icon-registry';
+import { IconRegistryModule } from '@jeppesen-foreflight/dp-dls-global-angular/icon-registry';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { CommonModule } from '@angular/common';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
@@ -32,14 +32,13 @@ export enum SidesheetContentMode {
   selector: 'ba-sidesheet',
   standalone: true,
   imports: [
-    CommonModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    IconRegistryModule,
-  ],
+    IconRegistryModule
+],
   templateUrl: './sidesheet.component.html',
   styleUrls: ['./sidesheet.component.scss'],
 })

@@ -1,19 +1,21 @@
-<div class="container-fluid">
+<div class="container-fluid mt-3">
 
   <h1 class="heading-low">Template 3</h1>
 
   <p class="body-medium-default">Features: Data visualizations, and tables with search/filter, sort, and select.</p>
 
-      <!-- <p class="body-low-default text-danger"></p>
+  <!-- <p class="body-low-default text-danger"></p>
   <div class="d-flex align-items-center alert alert-warning" role="alert">
   <mat-icon class="me-2" svgIcon="icon-warning-filled"></mat-icon>
  Tables do not display correctly when placed within cards
   </div> -->
 
+
+
   <div class="row">
     <div class="col-sm-12 col-md-4 col-lg-4 mb-2">
       <mat-card appearance="outlined">
-             <mat-card-header>
+        <mat-card-header>
           <mat-card-title>Fleet</mat-card-title>
         </mat-card-header>
         <mat-card-content>
@@ -25,7 +27,7 @@
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4 mb-2">
       <mat-card appearance="outlined">
-                   <mat-card-header>
+        <mat-card-header>
           <mat-card-title>Half-year costs</mat-card-title>
         </mat-card-header>
         <mat-card-content>
@@ -49,9 +51,7 @@
     </div>
   </div>
 
-  <div style="margin-top: 12px;"></div>
-
-  <mat-toolbar>
+  <mat-toolbar class="mt-5">
     <mat-toolbar-row>
       <form>
         <mat-form-field subscriptSizing="dynamic">
@@ -63,14 +63,17 @@
 
       <span class="spacer"></span>
 
-      <!-- <button mat-icon-button color="accent" aria-label="Example icon-button with icon">
-        <mat-icon svgIcon="icon-add-filled"></mat-icon>
-      </button> -->
+      <button mat-icon-button color="accent" (click)="openCreateDialog()">
+        <mat-icon svgIcon="icon-add"></mat-icon>
+
+      </button>
+
+      <button mat-icon-button color="accent"  (click)="openDeleteReason()">
+        <mat-icon svgIcon="icon-delete"></mat-icon>
+      </button>
     </mat-toolbar-row>
 
   </mat-toolbar>
-
-<mat-divider />
 
   <div class="tableScroll">
 
@@ -151,37 +154,6 @@
     </table>
   </div>
 
-     <!-- <mat-paginator #paginator class="pt-3" [length]="dataSource.data.length" [pageIndex]="0" [pageSize]="10"  [pageSizeOptions]="[20, 50, 100]" aria-label="Select page"></mat-paginator> -->
+  <!-- <mat-paginator #paginator class="pt-3" [length]="dataSource.data.length" [pageIndex]="0" [pageSize]="10"  [pageSizeOptions]="[20, 50, 100]" aria-label="Select page"></mat-paginator> -->
 
 </div>
-
-
-
-      <!-- <mat-toolbar>
-        <span class="align-self-end">
-          <mat-form-field subscriptSizing="dynamic">
-            <mat-label>Type to Search</mat-label>
-            <input matInput (keyup)="applyFilter($event)" #input>
-            <mat-icon svgIcon="icon-search-filled" class="text-muted" matIconSuffix></mat-icon>
-          </mat-form-field>
-        </span>
-
-        <span class="spacer"></span>
-
-        <mat-chip-listbox aria-label="Labels examples">
-          @for (labelExample of labelExamples(); track labelExample.name) {
-          <mat-chip-option>
-            {{labelExample.name}}
-          </mat-chip-option>
-          }
-        </mat-chip-listbox>
-
-        <button mat-icon-button color="warn" aria-label="Example icon-button with icon">
-          <mat-icon svgIcon="icon-favorite-filled"></mat-icon>
-        </button>
-        <button mat-icon-button color="primary" aria-label="Example icon-button with icon">
-          <mat-icon svgIcon="icon-add"></mat-icon>
-        </button>
-      </mat-toolbar> -->
-
-

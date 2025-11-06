@@ -10,7 +10,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatDivider } from "@angular/material/divider";
-
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { NewRecipientComponent } from "./new-device/new-recipient.component";
+import { DeleteReasonComponent } from "./delete-reason/delete-reason.component";
 
 export interface TableItem {
   name: string;
@@ -126,7 +129,7 @@ const EXAMPLE_DATA: TableItem[] = [
 @Component({
   selector: 'app-template-3',
   standalone: true,
-  imports: [MatToolbarModule, MatFormField, MatInputModule, MatIcon, MatButtonModule, MatTableModule, MatSort, MatSortHeader, MatCheckboxModule, MatPaginatorModule, MatDivider, MatCardModule],
+  imports: [ReactiveFormsModule, MatDialogModule, MatToolbarModule, MatFormField, MatInputModule, MatIcon, MatButtonModule, MatTableModule, MatSort, MatSortHeader, MatCheckboxModule, MatPaginatorModule, MatCardModule],
   templateUrl: './template-3.component.html',
   styleUrl: './template-3.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -177,6 +180,18 @@ export class Template3Component implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
   }
 
+constructor(public dialog: MatDialog) { }
 
+  openCreateDialog() {
+    const dialogRef = this.dialog.open(NewRecipientComponent, {
+      maxWidth: "850px",
+    });
+  }
+
+  // This is the Confirm Delete dialog
+  openDeleteReason() {
+    const dialogRef = this.dialog.open(DeleteReasonComponent, {
+      width: "300px",
+    });
+  }
 }
-

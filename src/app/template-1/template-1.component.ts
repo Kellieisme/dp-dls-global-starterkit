@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-
-
 @Component({
   selector: 'app-template-1',
     imports: [],
