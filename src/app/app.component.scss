@@ -1,13 +1,21 @@
-@use '@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss';
 
+// Global styles for app (ViewEncapsulation.None ensures these apply globally)
 
 html,
-body {   height: 100vh; }
-
 body {
-background-color: var(--color-ui-background-lowest)
+  height: 100vh;
 }
 
+body {
+  background-color: var(--color-ui-background-lowest);
+}
+
+// Typography defaults
+p, h1, h2, h3, h4, h5 {
+  margin-bottom: .5rem;
+}
+
+// Theme display utilities
 .display-dark {
   .theme-light & {
     display: none;
@@ -21,56 +29,41 @@ background-color: var(--color-ui-background-lowest)
   }
 }
 
+// Material overrides
 .mat-drawer-content {
   background: var(--color-ui-background-low);
 }
 
-$enable-negative-margins: true;
+.mat-mdc-tab-body-content {
+  overflow-x: hidden;
+}
 
-// .container-fluid {
-//   padding: $size-relaxed-spacing-4xl;
-// }
-
-//  .mat-mdc-tab-body-wrapper {
-//    padding-top: $size-relaxed-spacing-4xl;
-// }
-
-  .mat-mdc-tab-body-content {
-    overflow-x: hidden;
+// Table status styles
+[mat-table] {
+  .status {
+    &--success {
+      color: var(--color-semantic-textandicon-success);
+    }
+    &--warning {
+      color: var(--color-semantic-textandicon-warning);
+    }
   }
+}
 
-  section {
-    &.section__cards {
-      a {
-        display: block;
-      }
-     // .col {
-      //   margin-bottom: $size-relaxed-spacing-xl;
-      // }
-      }
-    .mat-mdc-card-image {
-      max-height: 214px;
+// Section styles
+section {
+  &.section__cards {
+    a {
+      display: block;
     }
   }
 
-  [mat-table] {
-    .status {
-      // @include typography-xl-body-low-highlight;
-      &--success {
-        color: var(--color-semantic-textandicon-success);
-      }
-      &--warning {
-        color: var(--color-semantic-textandicon-warning);
-      }
-    }
+  .mat-mdc-card-image {
+    max-height: 214px;
   }
+}
 
-
-
-
-
-
-
+// List styles
 ul.text-white {
   list-style: disc;
   margin-left: 1.5em;

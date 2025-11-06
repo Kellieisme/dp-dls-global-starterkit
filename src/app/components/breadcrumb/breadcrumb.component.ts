@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { BreadcrumbComponent } from "@dasdigitalplatform/dls-angular/breadcrumb";
+import { BreadcrumbComponent } from "@jeppesen-foreflight/dp-dls-global-angular/breadcrumb";
 
 @Component({
     selector: 'breadcrumb-page',

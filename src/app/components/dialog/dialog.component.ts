@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule, MatDivider } from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'dialog-content-example',
@@ -24,7 +24,7 @@ export class DialogContentExample {
 @Component({
   selector: 'dialog-content-example-dialog',
   templateUrl: 'dialog-content-example-dialog.html',
-  imports: [MatDialogModule, MatButtonModule, MatIconModule, MatDivider],
+  imports: [MatDialogModule, MatButtonModule, MatIconModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true
 })

@@ -1,4 +1,4 @@
-@import "@dasdigitalplatform/dls-global-assets/dist/scss/base/_variables.scss";
+// Using CSS custom properties from global styles instead of importing SCSS variables
 
 :host {
   mat-sidenav-container {
@@ -15,13 +15,13 @@
       background-color: var(--color-ui-background-lowest);
       padding-top: var(--size-spacing-s);
       padding-right: var(--size-spacing-s);
-      padding-bottom: $size-relaxed-spacing-s;
-      padding-left: $size-relaxed-spacing-xl;
+      padding-bottom: var(--spacing-s);
+      padding-left: var(--spacing-xl);
     }
 
     .sidesheet-content {
       flex-grow: 1;
-      padding: $size-relaxed-spacing-s;
+      padding: var(--spacing-s);
     }
 
     &.mat-drawer-over {
@@ -34,16 +34,16 @@
 
   .sidesheet-footer {
     position: absolute;
-    padding: $size-relaxed-spacing-m $size-relaxed-spacing-xl;
-    bottom: $size-relaxed-spacing-none;
-    right: $size-relaxed-spacing-none;
+    padding: var(--spacing-m) var(--spacing-xl);
+    bottom: var(--spacing-none);
+    right: var(--spacing-none);
     width: 100%;
 
     .footer-actions {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: $size-relaxed-spacing-xs;
+      gap: var(--spacing-xs);
     }
   }
 }

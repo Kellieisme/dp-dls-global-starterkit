@@ -20,10 +20,10 @@ import { CardsComponent } from './components/cards/cards.component';
 import { DialogContentExample } from './components/dialog/dialog.component';
 import { ListComponent } from './components/list/list.component';
 import { Template1Component } from './template-1/template-1.component';
-import { DevicesComponent } from './template-4/devices.component';
 import { ComponentsComponent } from './components/components.component';
 import { Template3Component } from './template-3/template-3.component';
 import { Template2Component } from './template-2/template-2.component';
+import { Template4Component } from './template-4/template-4.component';
 
 
 export const routes: Routes = [
@@ -51,8 +51,8 @@ export const routes: Routes = [
     { path: 'template-1', component: Template1Component },
     { path: 'template-2', component: Template2Component },
     { path: 'template-3', component: Template3Component },
-    { path: 'template-4', component: DevicesComponent },
     { path: 'components', component: ComponentsComponent },
+    { path: 'template-4', component: Template4Component },
 
 
 ];

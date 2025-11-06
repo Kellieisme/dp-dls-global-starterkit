@@ -1,20 +1,20 @@
 import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { IconRegistryModule } from '@design/dls-global-angular/icon-registry';
-import { MatIconModule } from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
-import { ThemeToggleModule } from '@design/dls-global-angular/theme-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterModule } from '@angular/router';
+import { IconRegistryModule } from '@jeppesen-foreflight/dp-dls-global-angular/icon-registry';
+import { MatIconModule } from '@angular/material/icon';
+
+import { ThemeToggleModule, ThemeToggleService } from '@jeppesen-foreflight/dp-dls-global-angular/theme-toggle';
 import { MatDividerModule } from '@angular/material/divider';
-import { UserProfileComponent } from '@design/dls-global-angular/user-profile';
+import { UserProfileComponent } from '@jeppesen-foreflight/dp-dls-global-angular/user-profile';
 import { MatMenuModule } from '@angular/material/menu';
-import { NavigationRailComponent } from '@design/dls-global-angular/navigation-rail';
-import { TopAppBarComponent } from '@design/dls-global-angular/top-app-bar';
+import { NavigationRailComponent } from '@jeppesen-foreflight/dp-dls-global-angular/navigation-rail';
+import { TopAppBarComponent } from '@jeppesen-foreflight/dp-dls-global-angular/top-app-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-import {MatChipsModule} from '@angular/material/chips';
-import { filter } from 'rxjs';
+import { MatChipsModule } from '@angular/material/chips';
+import { T } from '@angular/cdk/keycodes';
 
 const homeRouteMatch = '/home';
 
@@ -22,104 +22,145 @@ const homeRouteMatch = '/home';
   selector: 'app-main-nav',
   standalone: true,
   imports: [
-    MatIconModule, CommonModule, IconRegistryModule, ThemeToggleModule, MatChipsModule,
-    MatSidenavModule, MatDividerModule, MatMenuModule, NavigationRailComponent, MatListModule,
-    MatButtonModule, MatToolbarModule, RouterModule, UserProfileComponent, TopAppBarComponent, MatButtonModule, MatListModule
-],
+    MatIconModule,
+    IconRegistryModule,
+    MatChipsModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatMenuModule,
+    NavigationRailComponent,
+    MatListModule,
+    MatButtonModule,
+    MatToolbarModule,
+    RouterModule,
+    UserProfileComponent,
+    TopAppBarComponent,
+    ThemeToggleModule
+  ],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './main-nav.component.html'
 })
 export class MainNavComponent {
-    showDrawer: boolean = false;
+  showDrawer: boolean = false;
+
   @ViewChild('sidenavContent', { read: ElementRef, static: false }) sidenavContent!: ElementRef;
 
-  railMenuItems  = [
-      {
+  menuItems = [
+    {
       label: 'Dashboard',
       icon: 'dashboard',
       route: '/dash',
+      toggled: false,
     },
-        {
+    {
       label: 'components',
       icon: 'code',
       route: '/components',
+      toggled: false,
+      // children: [
+      //   {
+      //     label: 'Badge',
+      //     route: '/components/badge'
+      //   },
+      //   {
+      //     label: 'Button',
+      //     route: '/components/button',
+      //   },
+      //   {
+      //     label: 'Breadcrumb',
+      //     route: '/components//breadcrumb',
+      //   },
+      //   {
+      //     label: 'Card',
+      //     route: '/components//cards',
+      //   },
+      //   {
+      //     label: 'Checkbox',
+      //     route: '/components//checkbox',
+      //   },
+      //   {
+      //     label: 'Chip',
+      //     route: '/components//chip',
+      //   },
+      //   {
+      //     label: 'Date picker',
+      //     route: '/components//date-picker',
+      //   },
+      //   {
+      //     label: 'Dialog',
+      //     route: '/components//dialog',
+      //   },
+      //   {
+      //     label: 'Drag & drop',
+      //     route: '/components/drag-n-drop',
+      //   },
+      //   {
+      //     label: 'Form',
+      //     route: '/components//form',
+      //   },
+      //   {
+      //     label: 'Input',
+      //     route: '/components//input',
+      //   },
+      //   {
+      //     label: 'Menu',
+      //     route: '/components//menu',
+      //   },
+      //   {
+      //     label: 'Select',
+      //     route: '/components//select',
+      //   },
+      //   {
+      //     label: 'Side sheet',
+      //     route: '/components//sidesheet',
+      //   },
+      //   {
+      //     label: 'Slide Toggle/Switch',
+      //     route: '/components//switch',
+      //   },
+      //   {
+      //     label: 'Table',
+      //     route: '/components//table',
+      //   },
+      //   {
+      //     label: 'Tree',
+      //     route: '/components//tree',
+      //   }
+      // ]
     },
     {
       label: 'Template 1',
       icon: 'favorite',
       route: '/template-1',
+      toggled: false,
     },
     {
       label: 'Template 2',
       icon: 'favorite',
       route: '/template-2',
+      toggled: false,
     },
-       {
+    {
       label: 'Template 3',
       icon: 'add',
       route: '/template-3',
+      toggled: false,
+    },
+    {
+      label: 'Template 4',
+      icon: 'add',
+      route: '/template-4',
+      toggled: false,
     },
 
     {
       label: 'Typography',
       icon: 'type-specimen',
       route: '/typography',
-    },
-    //   {
-    //   label: 'Changelog',
-    //   icon: 'favorite',
-    //   route: '/versions',
-    // },
+    }
   ];
 
   isSidenavOpen: boolean = false;
   router: any;
   selectedLevel1Item: undefined;
-
-
-  // ngAfterViewInit(): void {
-  //   this.router.events
-  //     .pipe(
-  //       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
-  //     )
-  //     .subscribe((event: NavigationEnd) => {
-  //       this.updateMenuToggledState(event.urlAfterRedirects);
-  //       this.showDrawer = event.urlAfterRedirects.includes(drawerPath);
-  //       if (isPlatformBrowser(this.platformId)) {
-  //         console.log(event.urlAfterRedirects)
-  //         window.scrollTo(0, 0)
-  //       }
-  //       if (this.sidenavContent && this.sidenavContent.nativeElement) {
-  //         this.sidenavContent.nativeElement.scrollTop = 0;
-  //       }
-  //     });
-  // }
-  // platformId(platformId: any) {
-  //   throw new Error('Method not implemented.');
-  // }
-
-  // private updateMenuToggledState(currentUrl: string): void {
-  //   this.railMenuItems.forEach(item => {
-  //     item.toggled = item.route ? currentUrl.includes(item.route) : false;
-  //     item.children?.forEach(item => {
-  //       item.toggled = item.route ? currentUrl.includes(item.route) : false;
-  //     })
-  //   }
-  //   );
-  //   if (currentUrl.includes(homeRouteMatch)) {
-  //     this.selectedLevel1Item = undefined;
-  //     this.isSidenavOpen = false;
-  //   }
-  // }
-
-  // onLevel1ItemClick(item: AtmosphereNavRailMenuItem) {
-  //   if (item.children && item.children.length > 0) {
-  //     this.selectedLevel1Item = item;
-  //     this.isSidenavOpen = true;
-  //   } else {
-  //     this.selectedLevel1Item = undefined;
-  //     this.isSidenavOpen = false;
-  //   }
-  // };
-
 }

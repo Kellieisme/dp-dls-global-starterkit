@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { BreadcrumbComponent } from "@dasdigitalplatform/dls-angular/breadcrumb";
+import { BreadcrumbComponent } from "@jeppesen-foreflight/dp-dls-global-angular/breadcrumb";
 import { ChipsComponent } from './chips/chips.component';
 import { DatepickerComponent } from "./datepicker/datepicker.component";
 import { CheckboxComponent } from './checkbox/checkbox.component';
