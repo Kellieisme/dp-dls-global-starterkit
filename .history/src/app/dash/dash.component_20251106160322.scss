@@ -1,0 +1,26 @@
+
+@use '@angular/material' as mat;
+
+p {
+  margin-bottom: mat.spacing(2); // Using Material's spacing system (8px * 2 = 16px)
+}
+
+mat-card {
+  height: 100%;
+  
+  mat-card-content {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
