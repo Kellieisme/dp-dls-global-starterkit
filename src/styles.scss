@@ -4,10 +4,9 @@
 @use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_typographyMixins.scss' as *;
 @use '@jeppesen-foreflight/dp-dls-global-angular/styles/material/core';
 
-// Bootstrap Configuration
-$enable-negative-margins: true;
-$enable-grid-classes: true;
-$enable-cssgrid: true;
+// Bootstrap Custom Variables
+$grid-gutter-width: .5rem !default;
+$container-padding-x: 1rem;
 
 // Import Bootstrap Components
 @import "bootstrap/scss/bootstrap-grid";
@@ -18,9 +17,7 @@ $enable-cssgrid: true;
 @import "bootstrap/scss/alert";  
 
 
-// Bootstrap Custom Variables
-$grid-gutter-width: 1.5rem;
-$container-padding-x: 1rem;
+
 
 // Expose commonly used spacing variables as CSS custom properties
 // This allows components to use them without importing SCSS variables
@@ -39,9 +36,6 @@ body {
   @include typography-xl-body-low-default;
 }
 
-p {
-  margin-bottom: .65rem;
-}
 
 // Typography classes using design system mixins
 .heading-low {
@@ -52,8 +46,9 @@ p {
   @include typography-xl-body-high-default;
 }
 
-.body-low-default {
+.body-low-defaul, p {
   @include typography-xl-body-low-default;
+  margin-bottom: .75rem;
 }
 
 .title-medium {
