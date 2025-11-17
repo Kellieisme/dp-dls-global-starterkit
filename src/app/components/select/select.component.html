@@ -1,0 +1,28 @@
+<div class="d-flex align-items-center alert alert-warning" role="alert">
+  <mat-icon class="me-2" svgIcon="icon-warning-filled"></mat-icon>
+  Checkboxes disappear when selected - need to allow for "multi selection"
+</div>
+
+
+
+
+    <p>Choose your favorite pizza toppings:</p>
+
+    <mat-form-field>
+      <mat-label>Toppings</mat-label>
+      <mat-select [formControl]="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value?.[0] || ''}}
+          @if ((toppings.value?.length || 0) > 1) {
+          <span class="example-additional-selection">
+            (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+          }
+        </mat-select-trigger>
+        @for (topping of toppingList; track topping) {
+        <mat-option [value]="topping">{{topping}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+

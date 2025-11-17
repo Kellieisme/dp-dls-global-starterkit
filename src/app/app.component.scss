@@ -1,0 +1,51 @@
+
+html,
+body {
+  height: 100vh;
+}
+
+
+.display-dark {
+  .theme-light & {
+    display: none;
+  }
+}
+
+.display-light {
+  display: none;
+  .theme-light & {
+    display: block;
+  }
+}
+
+.mat-drawer-content {
+  background: var(--color-ui-background-low);
+}
+
+.mat-mdc-tab-body-content {
+  overflow-x: hidden;
+}
+
+[mat-table] {
+  .status {
+    &--success {
+      color: var(--color-semantic-textandicon-success);
+    }
+    &--warning {
+      color: var(--color-semantic-textandicon-warning);
+    }
+  }
+}
+
+// Section styles
+section {
+  &.section__cards {
+    a {
+      display: block;
+    }
+  }
+
+  .mat-mdc-card-image {
+    max-height: 214px;
+  }
+}
