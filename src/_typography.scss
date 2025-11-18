@@ -164,6 +164,9 @@
 .body-lowest-default {
   @include typography-xl-body-lowest-default;
 }
+.body-lowest-highlight {
+  @include typography-xl-body-lowest-highlight;
+}
 .label-high {
   @include typography-xl-label-high;
 }
