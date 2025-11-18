@@ -40,7 +40,7 @@ The release workflow (`.github/workflows/release.yml`) performs:
 
 ## File Structure
 
-```
+```text
 ├── .github/workflows/release.yml    # Release automation workflow
 ├── scripts/release.sh               # Release helper script
 ├── CHANGELOG.md                     # Release notes and history
