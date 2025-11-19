@@ -33,3 +33,12 @@ body {
   margin: 0 auto;
   padding: var(--spacing-xl);
 }
+
+.row {
+  margin-bottom: 0.5rem;
+  
+  > .col,
+  > [class*="col-"] {
+    margin-bottom: 0.5rem;
+  }
+}
