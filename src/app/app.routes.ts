@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomePageComponent } from './home/home.component';
 import { ButtonPageComponent } from './button/button.component';
 import { ListPageComponent } from './list/list.component';
 import { BreadcrumbPageComponent } from './breadcrumb/breadcrumb.component';
@@ -28,10 +27,11 @@ import { Template4Component } from './template-4/template-4.component';
 import { BadgeComponent } from './badge/badge.component';
 import { SnackbarPageComponent } from './snackbar/snackbar.component';    
 import { ComponentsComponent } from './components/components.component';
+import { DashComponent } from './dash/dash.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomePageComponent },
+  {path: '', redirectTo: 'dash', pathMatch: 'full'},
+  {path: 'dash', component: DashComponent },
   { path: 'button', component: ButtonPageComponent},
   { path: 'navigation-drawer', component: NavigationDrawerPageComponent},
   { path: 'card', component: CardPageComponent},
@@ -67,6 +67,6 @@ export const routes: Routes = [
   { path: 'breadcrumb/level-1/level-2/level-3/level-4/level-5', component: BreadcrumbPageComponent, data: { breadcrumb: 'Level 5' } },
   {
     path: "**",
-    redirectTo: 'home'
+    redirectTo: 'dash'
   }
 ];

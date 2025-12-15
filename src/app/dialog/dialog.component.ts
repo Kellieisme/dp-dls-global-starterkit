@@ -12,7 +12,6 @@ import { IconRegistryModule } from '@jeppesen-foreflight/dp-dls-global-angular/i
     MatButtonModule,
     IconRegistryModule,
   ],
-  templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.scss'
+  templateUrl: './dialog.component.html'
 })
 export class BasicDialogComponent {}

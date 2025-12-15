@@ -21,6 +21,7 @@ export class DialogPageComponent {
     // Get current theme from body class
     const currentTheme = document.body.classList.contains('theme-light') ? 'theme-light' : 'theme-dark';
     this.dialog.open(BasicDialogComponent, {
+      width: '400px',
       panelClass: currentTheme
     });
   }

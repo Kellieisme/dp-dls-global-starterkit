@@ -19,3 +19,8 @@
   margin: 0 12px;
 }
 
+.chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--foundation-spacing-xs-fixed);
+}
