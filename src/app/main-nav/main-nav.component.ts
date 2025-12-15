@@ -4,6 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { IconRegistryModule } from '@jeppesen-foreflight/dp-dls-global-angular/icon-registry';
 import { MatIconModule } from '@angular/material/icon';
 import { ThemeToggleModule } from '@jeppesen-foreflight/dp-dls-global-angular/theme-toggle';
+import { DensityToggleModule } from '@jeppesen-foreflight/dp-dls-global-angular/density-toggle';
 import { MatDividerModule } from '@angular/material/divider';
 import { UserProfileComponent } from '@jeppesen-foreflight/dp-dls-global-angular/user-profile';
 import { MatMenuModule } from '@angular/material/menu';
@@ -13,6 +14,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
+import { Template2Component } from '../template-2/template-2.component';
+import { Template3Component } from '../template-3/template-3.component';
+import { Template4Component } from '../template-4/template-4.component';
 
 @Component({
   selector: 'app-main-nav',
@@ -31,7 +35,8 @@ import { MatChipsModule } from '@angular/material/chips';
     RouterModule,
     UserProfileComponent,
     TopAppBarComponent,
-    ThemeToggleModule
+    ThemeToggleModule,
+    DensityToggleModule
   ],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './main-nav.component.html'
@@ -44,13 +49,13 @@ export class MainNavComponent {
   menuItems = [
     {
       label: 'Dashboard',
-      icon: 'dashboard',
+      icon: 'home',
       route: '/dash',
       toggled: false,
     },
     {
-      label: 'components',
-      icon: 'code',
+      label: 'Components',
+      icon: 'favorite',
       route: '/components',
       toggled: false,
       // children: [
@@ -115,6 +120,10 @@ export class MainNavComponent {
       //     route: '/components//switch',
       //   },
       //   {
+      //     label: 'Snackbar',
+      //     route: '/components//snackbar',
+      //   },
+      //   {
       //     label: 'Table',
       //     route: '/components//table',
       //   },
@@ -125,35 +134,29 @@ export class MainNavComponent {
       // ]
     },
     {
-      label: 'Template 1',
-      icon: 'favorite',
-      route: '/template-1',
-      toggled: false,
+      label: 'Glass',
+      icon: 'verified',
+      route: '/glass',
     },
-    {
-      label: 'Template 2',
-      icon: 'favorite',
-      route: '/template-2',
-      toggled: false,
-    },
-    {
-      label: 'Template 3',
-      icon: 'add',
-      route: '/template-3',
-      toggled: false,
-    },
-    {
-      label: 'Template 4',
-      icon: 'add',
-      route: '/template-4',
-      toggled: false,
-    },
-
     {
       label: 'Typography',
       icon: 'type-specimen',
       route: '/typography',
-    }
+    },
+    { label: 'template-2',
+      icon: 'verified',
+      route: '/template-2',
+    },
+      { 
+        label: 'template-3',
+        icon: 'verified',
+        route: '/template-3',
+      },
+      { 
+        label: 'template-4',
+        icon: 'verified',
+        route: '/template-4',
+      }
   ];
 
   isSidenavOpen = false;

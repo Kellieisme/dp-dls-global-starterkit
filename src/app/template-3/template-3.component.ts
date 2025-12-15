@@ -184,7 +184,7 @@ constructor(public dialog: MatDialog) { }
 
   openCreateDialog() {
     const dialogRef = this.dialog.open(NewRecipientComponent, {
-      maxWidth: "850px",
+width: "600px",
     });
   }
 

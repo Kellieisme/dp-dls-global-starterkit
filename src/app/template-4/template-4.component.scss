@@ -3,21 +3,21 @@
 // Using CSS custom properties from global styles instead of importing SCSS variables
 
 .padding-extra{
-  padding: 0 var(--sizing-m);
+  padding: 0 var(--foundation-sizing-m);
 }
 
 .col {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--foundation-spacing-2xl);
 }
 
 h6 {
-  color: var(--color-ui-textandicon-high);
-  margin-bottom: var(--sizing-m);
+  color: var(--foundation-ui-textandicon-high);
+  margin-bottom: var(--foundation-sizing-m);
 }
 
 .card-grid {
   display: grid;
-  gap: var(--sizing-m);
+  gap: var(--foundation-sizing-m);
   width: 100%;
   align-items: stretch;
 }

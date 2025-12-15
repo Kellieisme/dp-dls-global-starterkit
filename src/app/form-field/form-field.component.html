@@ -1,0 +1,87 @@
+<p>&lt;mat-form-field&gt; refers to the wrapper component &lt;mat-form-field&gt; and "form field control" refers to the
+  component that the &lt;mat-form-field&gt; is wrapping (e.g. the input, textarea, select):
+  Input (text field, text area),
+  Select,
+  Chip List </p>
+
+<form class="example-form">
+  <h5>With left and right hint text</h5>
+  <mat-form-field>
+    <mat-label>Least favorite food</mat-label>
+    <input matInput>
+    <mat-hint>Supporting text</mat-hint>
+    <mat-hint align="end">hint 2</mat-hint>
+  </mat-form-field>
+
+  <h5>With icon suffix</h5>
+  <mat-form-field>
+    <mat-label>Enter password</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'" />
+    <button matIconButton matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()">
+      <mat-icon svgIcon='icon-visibility-filled'></mat-icon>
+    </button>
+    <mat-hint>Supporting text</mat-hint>
+  </mat-form-field>
+
+  <br> <br>
+
+  <mat-form-field class="mat-form-field-invalid">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <mat-icon svgIcon="icon-cancel" matSuffix></mat-icon>
+    <mat-hint>Supporting text</mat-hint>
+  </mat-form-field>
+
+  <h5>With text prefix</h5>
+  <mat-form-field floatLabel="always">
+    <mat-label>Amount</mat-label>
+    <input matInput type="number" class="justify-right" placeholder="0" />
+    <span matTextPrefix>$&nbsp;</span>
+    <mat-hint>Supporting text</mat-hint>
+  </mat-form-field>
+
+  <h5>With text suffix</h5>
+  <mat-form-field>
+    <mat-label>Amount</mat-label>
+    <input matInput type="number" />
+    <span matTextSuffix>lbs</span>
+  </mat-form-field>
+</form>
+
+<h1 class="heading-low">Input</h1>
+<p><code>matInput</code> is a directive that allows native <code>input</code> and <code>textarea</code> elements to work with <code>mat-form-field</code>.</p>
+
+<h5>With placeholder</h5>
+<form>
+  <mat-form-field>
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="Sushi">
+      <mat-hint>Supporting text</mat-hint>
+  </mat-form-field>
+
+
+<h5>Without placeholder</h5>
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <input matInput>
+    <mat-hint>Supporting text</mat-hint>
+</mat-form-field>
+
+
+<h5>Disabled</h5>
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <input matInput disabled>
+    <mat-hint>Supporting text</mat-hint>
+</mat-form-field>
+
+
+<h5>Input: text area</h5>
+<mat-form-field>
+  <mat-label>Leave a comment</mat-label>
+  <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    <mat-hint>Supporting text</mat-hint>
+</mat-form-field>
+
+</form>

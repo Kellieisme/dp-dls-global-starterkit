@@ -1,37 +1,48 @@
-// Design System Imports
-@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_variables.scss' as *;
-@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_compositionMixins.scss' as *;
-@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/_typographyMixins.scss' as *;
-@use '@jeppesen-foreflight/dp-dls-global-angular/styles/material/core';
-
-// Bootstrap Custom Variables
-$grid-gutter-width: .5rem !default;
-
-@import "../node_modules/bootstrap/scss/bootstrap";
-
+@use '@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss';
+@use '@jeppesen-foreflight/dp-dls-global-angular/styles/material';
+@use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/linkMixins' as link;
 
 // Expose commonly used spacing variables as CSS custom properties
 // This allows components to use them without importing SCSS variables
-:root {
-  --spacing-none: #{$size-relaxed-spacing-none};
-  --spacing-xs: #{$size-relaxed-spacing-xs};
-  --spacing-s: #{$size-relaxed-spacing-s};
-  --spacing-m: #{$size-relaxed-spacing-m};
-  --spacing-xl: #{$size-relaxed-spacing-xl};
-  --spacing-2xl: #{$size-relaxed-spacing-2xl};
-  --sizing-m: #{$size-relaxed-sizing-m};
-}
 
 body {
-  background-color: var(--color-ui-background-lowest);
-  @include typography-xl-body-low-default;
+  background-color: var(--foundation-ui-background-page);
+}
+
+// Link utility classes
+a {
+  @include link.link-accent;
+}
+
+.link-primary {
+  @include link.link-primary;
+}
+
+.link-primary-underlined {
+  @include link.link-primary-underlined;
+}
+
+.link-accent {
+  @include link.link-accent;
+}
+
+.link-accent-visited {
+  @include link.link-accent-visited;
+}
+
+.link-accent-underlined {
+  @include link.link-accent-underlined;
+}
+
+.link-accent-underlined-visited {
+  @include link.link-accent-underlined-visited;
 }
 
 // Container constraints
 .container-xxl {
   max-width: 1320px;
   margin: 0 auto;
-  padding: var(--spacing-xl);
+  padding: var(--foundation-spacing-xl);
 }
 
 .row {

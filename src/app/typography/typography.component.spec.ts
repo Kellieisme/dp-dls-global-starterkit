@@ -11,7 +11,7 @@ describe('TypographyComponent', () => {
       imports: [TypographyComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(TypographyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
