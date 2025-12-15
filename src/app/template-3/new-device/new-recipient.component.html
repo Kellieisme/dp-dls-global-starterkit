@@ -1,20 +1,21 @@
-<div class="d-flex">
-  <!-- <div style="padding-left: 24px; padding-top: 24px" class="align-items-end">
-    <mat-icon svgIcon="icon-error"></mat-icon>
-  </div> -->
+    
 
-  <div style="padding-right: 6px; margin-top: 6px;" class="align-items-end ms-auto">
-    <button mat-icon-button color="primary" mat-dialog-close="true">
-      <mat-icon svgIcon="icon-close"></mat-icon>
-    </button>
-  </div>
-</div>
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 0; z-index: 1;">
+      <div style="position: absolute; top: calc(var(--size-spacing-m) + 16px); left: var(--size-spacing-xl);">
+        <mat-icon svgIcon="icon-warning"></mat-icon>
+      </div>
+      <div style="position: absolute; top: calc(var(--size-spacing-2xs) + 2px); right: var(--size-spacing-2xs);">
+        <button matIconButton mat-dialog-close="true">
+          <mat-icon svgIcon="icon-close"></mat-icon>
+        </button>
+      </div>
+    </div>
 
-<h2 mat-dialog-title class="title-high">This is the mat-dialog-title tag</h2>
+    <h2 mat-dialog-title style="padding-top: calc(var(--base-dimension-dynamic-s12) - 4px); margin-top: var(--size-spacing-none);">Dialog Title</h2>
 
 <mat-dialog-content>
-
-  <div class="row">
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-sm-2 g-1">  
 
     <div class="col">
       <mat-form-field>
@@ -33,9 +34,6 @@
       </mat-form-field>
     </div>
 
-  </div>
-
-  <div class="row">
     <div class="col">
       <mat-form-field>
         <mat-label>First Name</mat-label>
@@ -50,28 +48,21 @@
       </mat-form-field>
     </div>
 
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
+    <div class="col">
       <mat-form-field>
         <mat-label>Email</mat-label>
         <input matInput>
       </mat-form-field>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col">
      <mat-form-field>
         <mat-label>Serial #</mat-label>
         <input matInput>
       </mat-form-field>
     </div>
 
-  </div>
-
-  <div class="row">
-
-    <div class="col-4">
+    <div class="col">
         <mat-form-field>
         <mat-label>Distribution Group</mat-label>
         <mat-select>
@@ -82,14 +73,14 @@
       </mat-form-field>
     </div>
 
-    <div class="col-4">
+    <div class="col">
       <mat-form-field>
         <mat-label>Asset Tag #</mat-label>
         <input matInput>
       </mat-form-field>
     </div>
 
-    <div class="col-4">
+    <div class="col">
       <mat-form-field>
         <mat-label>Serial #</mat-label>
         <input matInput>
@@ -97,11 +88,28 @@
     </div>
 
   </div>
-
+</div>
 </mat-dialog-content>
 
-<mat-dialog-actions class="d-flex">
-  <button class="me-auto" mat-stroked-button color="accent" mat-dialog-close="true">Add to Sim</button>
-  <button mat-stroked-button mat-dialog-close>Cancel</button>
-  <button mat-flat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
-</mat-dialog-actions>
+   <mat-dialog-actions style="display: flex; gap: var(--foundation-spacing-xs);">
+      
+          <button
+           mat-dialog-close
+            style="margin-inline-end: auto;"
+            matButton
+            color="primary"
+            mat-dialog-close="true"
+            >
+            Tertiary
+          </button>
+     
+        <button matButton="outlined" mat-dialog-close>Cancel</button>
+        <button
+          matButton="filled"
+          color="primary"
+          mat-dialog-close
+          cdkFocusInitial
+          >
+          Install
+        </button>
+      </mat-dialog-actions>

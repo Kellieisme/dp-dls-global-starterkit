@@ -1,0 +1,57 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    [mode]="sidesheetMode"
+    [opened]="opened"
+    [style.width]="sidesheetWidth"
+    [position]="sidesheetPosition"
+    >
+    <mat-toolbar>
+      <span>Sheet title</span>
+      <button matIconButton (click)="sidenav.close()">
+        <mat-icon svgIcon="icon-close"></mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="sidesheet-content">
+      <p>This is the content area.</p>
+    </div>
+
+    <mat-divider></mat-divider>
+    <div class="sidesheet-footer">
+      @if (showFooter) {
+        <div class="footer-actions">
+          @for (button of buttons; track button) {
+            @if (button.buttonType === 'text') {
+              <button
+                mat-button
+                (click)="button.onClick()"
+                >
+                {{ button.text }}
+              </button>
+            }
+            @if (button.buttonType === 'stroked') {
+              <button
+                matButton="outlined"
+                (click)="button.onClick()"
+                >
+                {{ button.text }}
+              </button>
+            }
+            @if (button.buttonType === 'flat') {
+              <button
+                matButton="filled"
+                (click)="button.onClick()"
+                >
+                {{ button.text }}
+              </button>
+            }
+          }
+        </div>
+      }
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Your main content here -->
+    <button mat-button (click)="sidenav.open()">Open Side Sheet</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

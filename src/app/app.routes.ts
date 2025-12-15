@@ -1,58 +1,72 @@
 import { Routes } from '@angular/router';
-import { DashComponent } from './dash/dash.component';
-import { DatepickerComponent } from './components/datepicker/datepicker.component';
-import { DragNDropComponent } from './components/drag-n-drop/drag-n-drop.component';
-import { FormComponent } from './components/form/form.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { TableComponent } from './components/tables/table/table.component';
-import { TableCdkComponent } from './components/tables/table-cdk/table-cdk.component';
-import { TreeComponent } from './components/tree/tree.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
-import { ChipsComponent } from './components/chips/chips.component';
-import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { HomePageComponent } from './home/home.component';
+import { ButtonPageComponent } from './button/button.component';
+import { ListPageComponent } from './list/list.component';
+import { BreadcrumbPageComponent } from './breadcrumb/breadcrumb.component';
+import { MenuPageComponent } from './menu/menu.component';
+import { CardPageComponent } from './card/card.component';
+import { NavigationDrawerPageComponent } from './navigation-drawer-page/navigation-drawer-page.component';
+import { TopAppBarPageComponent } from './top-app-bar/top-app-bar.component';
+import { TabsPageComponent } from './tabs/tabs.component';
+import { DialogPageComponent } from './dialog/dialog-page.component';
+import { RadioComponent } from './radio/radio.component';
+import { TablePageComponent } from './table/table.component';
+import { UserProfilePageComponent } from './user-profile/user-profile.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SwitchPageComponent } from './slide-toggle/slide-toggle.component';
+import { FormFieldComponent } from './form-field/form-field.component';
+import { InputComponent } from './input/input.component';
+import { SelectComponent } from './select/select.component';
+import { TooltipPageComponent } from './tooltip/tooltip.component';
+import { ChipsPageComponent } from './chips/chips.component';
+import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 import { TypographyComponent } from './typography/typography.component';
-import { SelectComponent } from './components/select/select.component';
-import { SideSheetComponent } from './components/sidesheet/sidesheet.component';
-import { SwitchComponent } from './components/switch/switch.component';
-import { BadgeComponent } from './components/badge/badge.component';
-import { InputComponent } from './components/input/input.component';
-import { CardsComponent } from './components/cards/cards.component';
-import { DialogContentExample } from './components/dialog/dialog.component';
-import { ListComponent } from './components/list/list.component';
-import { Template1Component } from './template-1/template-1.component';
-import { ComponentsComponent } from './components/components.component';
+import { GlassExamplesComponent } from './glass-examples/glass-examples.component';
 import { Template3Component } from './template-3/template-3.component';
 import { Template2Component } from './template-2/template-2.component';
 import { Template4Component } from './template-4/template-4.component';
-
+import { BadgeComponent } from './badge/badge.component';
+import { SnackbarPageComponent } from './snackbar/snackbar.component';    
+import { ComponentsComponent } from './components/components.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'dash', pathMatch: 'full'},
-    { path: 'dash', component: DashComponent },
-    { path: 'badge', component: BadgeComponent},
-    { path: 'button', component: ButtonsComponent },
-    { path: 'cards', component: CardsComponent },
-    { path: 'checkbox', component: CheckboxComponent },
-    { path: 'chip', component: ChipsComponent },
-    { path: 'dialog', component: DialogContentExample },
-    { path: 'date-picker', component: DatepickerComponent },
-    { path: 'drag-n-drop', component: DragNDropComponent },
-    { path: 'form', component: FormComponent },
-    { path: 'list', component: ListComponent },
-    { path: 'menu' , component: MenuComponent },
-    { path: 'table', component: TableComponent },
-    { path: 'table-cdk', component: TableCdkComponent },
-    { path: 'tree', component: TreeComponent },
-    { path: 'typography', component: TypographyComponent },
-    { path: 'select', component: SelectComponent },
-    { path: 'sidesheet', component: SideSheetComponent },
-    { path: 'switch', component: SwitchComponent },
-    { path: 'input', component: InputComponent},
-    { path: 'template-1', component: Template1Component },
-    { path: 'template-2', component: Template2Component },
-    { path: 'template-3', component: Template3Component },
-    { path: 'components', component: ComponentsComponent },
-    { path: 'template-4', component: Template4Component },
-
-
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomePageComponent },
+  { path: 'button', component: ButtonPageComponent},
+  { path: 'navigation-drawer', component: NavigationDrawerPageComponent},
+  { path: 'card', component: CardPageComponent},
+  { path: 'components', component: ComponentsComponent },
+  { path: 'top-app-bar', component: TopAppBarPageComponent},
+  { path: 'tabs', component: TabsPageComponent},
+  { path: 'menu', component: MenuPageComponent},
+  { path: 'dialog', component: DialogPageComponent},
+  { path: 'radio', component: RadioComponent},
+  { path: 'table', component: TablePageComponent},
+  { path: 'user-profile', component: UserProfilePageComponent},
+  { path: 'checkbox', component: CheckboxComponent},
+  { path: 'switch', component: SwitchPageComponent},
+  { path: 'form-field', component: FormFieldComponent},
+  { path: 'input', component: InputComponent},
+  { path: 'select', component: SelectComponent},
+  { path: 'tooltip', component: TooltipPageComponent},
+  { path: 'chips', component: ChipsPageComponent},
+  { path: 'progress-indicators', component: ProgressIndicatorComponent},
+  { path: 'list', component: ListPageComponent},
+  { path: 'template-2', component: Template2Component},
+  { path: 'template-3', component: Template3Component},
+  { path: 'template-4', component: Template4Component},
+  { path: 'badge', component: BadgeComponent},
+  { path: 'snackbar', component: SnackbarPageComponent},
+  { path: 'typography', component: TypographyComponent},
+  { path: 'glass', component: GlassExamplesComponent},
+  { path: 'breadcrumb', redirectTo: '/level-1', pathMatch: 'full' },
+  { path: 'breadcrumb/level-1', component: BreadcrumbPageComponent, data: { breadcrumb: 'Level 1' } },
+  { path: 'breadcrumb/level-1/level-2', component: BreadcrumbPageComponent, data: { breadcrumb: 'Level 2' } },
+  { path: 'breadcrumb/level-1/level-2/level-3', component: BreadcrumbPageComponent, data: { breadcrumb: 'Level 3' } },
+  { path: 'breadcrumb/level-1/level-2/level-3/level-4', component: BreadcrumbPageComponent, data: { breadcrumb: 'Level 4' } },
+  { path: 'breadcrumb/level-1/level-2/level-3/level-4/level-5', component: BreadcrumbPageComponent, data: { breadcrumb: 'Level 5' } },
+  {
+    path: "**",
+    redirectTo: 'home'
+  }
 ];

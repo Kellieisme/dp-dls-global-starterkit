@@ -1,8 +1,10 @@
-<ba-top-app-bar homeRoute="/" appLogo="" appName="Atmosphere Starter Kit (v20.3.12)">
+<ba-top-app-bar homeRoute="/" appLogo="" appName="Atmosphere sandbox v20.*">
 
   <div class="actions large-screen">
 
     <ba-theme-toggle></ba-theme-toggle>
+    
+    <ba-density-toggle></ba-density-toggle>
 
     <button mat-icon-button aria-label="Help">
       <mat-icon svgIcon="icon-help" aria-hidden="true"></mat-icon>
@@ -19,9 +21,10 @@
 
   <div class="actions small-screen" role="toolbar" aria-label="Secondary actions">
     <ba-theme-toggle></ba-theme-toggle>
+    <ba-density-toggle></ba-density-toggle>
 
-    <button mat-icon-button 
-           [matMenuTriggerFor]="overflowMenu" 
+    <button mat-icon-button
+           [matMenuTriggerFor]="overflowMenu"
            aria-label="More options">
       <mat-icon svgIcon="icon-more-vert" aria-hidden="true"></mat-icon>
     </button>
@@ -43,13 +46,13 @@
     <mat-divider [vertical]="true"> </mat-divider>
   </div>
 
-  <ba-user-profile clickable class="avatar" userFirstName="William" [matMenuTriggerFor]="menuUserLetter"></ba-user-profile>
+  <ba-user-profile clickable class="avatar" userFirstName="JeppFFy" [matMenuTriggerFor]="menuUserLetter"></ba-user-profile>
 
   <mat-menu #menuUserLetter="matMenu">
     <button mat-menu-item class="user-info-menu-item">
-      <ba-user-profile userFirstName="William"></ba-user-profile>
+      <ba-user-profile userFirstName="JeppFFy"></ba-user-profile>
       <div class="user-info">
-        <span class="user-name">William Boeing</span>
+        <span class="user-name">JeppFFy</span>
         <span class="additional-info">Additional info</span>
       </div>
     </button>
@@ -72,5 +75,11 @@
   </mat-menu>
 </ba-top-app-bar>
 
-<ba-navigation-rail [hideLabels]="false" [menuItems]="menuItems" wide homeRoute="/">
+<ba-navigation-rail
+[hideLabels]="false"
+[menuItems]="menuItems"
+wide
+homeRoute="/">
+
 </ba-navigation-rail>
+

@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from "@angular/material/card";
 import { MatDivider } from "@angular/material/divider";
 
-
 @Component({
-    selector: 'app-typography',
-    imports: [MatCardModule, MatMenuModule, MatFormFieldModule, MatSelectModule, MatCardModule, MatButtonModule, MatDivider],
-    templateUrl: './typography.component.html',
-    styleUrl: './typography.component.scss',
-    standalone: true
+  selector: 'app-typography',
+  standalone: true,
+  imports: [MatCardModule, MatDivider],
+  templateUrl: './typography.component.html',
+  styleUrl: './typography.component.scss'
 })
 export class TypographyComponent {
 
