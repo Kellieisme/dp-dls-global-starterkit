@@ -19,7 +19,7 @@ body {
 }
 
 .mat-drawer-content {
-  background: var(--color-ui-background-low);
+  background: var(--foundation-ui-background-low);
 }
 
 .mat-mdc-tab-body-content {
@@ -29,10 +29,10 @@ body {
 [mat-table] {
   .status {
     &--success {
-      color: var(--color-semantic-textandicon-success);
+      color: var(--foundation-semantic-textandicon-success);
     }
     &--warning {
-      color: var(--color-semantic-textandicon-warning);
+      color: var(--foundation-semantic-textandicon-warning);
     }
   }
 }
