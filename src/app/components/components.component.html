@@ -1,0 +1,349 @@
+  <div class="top-links">
+    <h1 class="heading-low" style="flex:auto;">Components</h1>
+    <a mat-button color="accent" routerLink="/">
+      <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma
+    </a>
+    <a mat-button color="accent" routerLink="/">
+      <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Angular Code
+    </a>
+  </div>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Badge</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/badge">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-badge></app-badge>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Breadcrumb</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/breadcrumb">page
+            </a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+
+        <mat-card-content>
+          <breadcrumb-page></breadcrumb-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Button</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/button">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <button-page></button-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Card</mat-card-title>
+          <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Default paragraph text (body-low)</p>
+          <span class="body-medium">Medium emphasis text</span>
+          <span class="label-low">Metadata label</span>
+        </mat-card-content>
+        <mat-card-actions class="d-flex">
+          <button class="me-auto" mat-button color="primary" mat-dialog-close="true">Tertiary</button>
+          <button matButton="outlined" mat-dialog-close>Cancel</button>
+          <button matButton="filled" color="primary" mat-dialog-close cdkFocusInitial>Install</button>
+        </mat-card-actions>
+
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Checkbox</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/checkbox">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-checkbox></app-checkbox>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Chip</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/chips">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <chips-page></chips-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Date and time picker</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/time-picker">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-time-picker></app-time-picker>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Dialog</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/dialog">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-dialog-page></app-dialog-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Form field and input</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/form-field">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-form-field></app-form-field>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>List</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/list">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <list-page></list-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Menu</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/menu">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <menu-page></menu-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Radio button</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/radio">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-radio></app-radio>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Select</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/select">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <app-select></app-select>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Sidesheet</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/sidesheet">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content style="max-height: 200px; overflow: hidden;">
+          <ba-sidesheet></ba-sidesheet>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Snackbar</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/snackbar">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <snackbar-page></snackbar-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Switch / toggle</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/switch">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <slide-toggle-page></slide-toggle-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card appearance="outlined">
+        <div style="padding: 12px 16px;">
+          <mat-card-title>Table</mat-card-title>
+          <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+            <a mat-button href="#" color="accent">
+              <mat-icon iconPositionEnd svgIcon="icon-call-made"></mat-icon>Figma asset
+            </a>
+            <a mat-button color="accent" href="/table">page</a>
+          </div>
+        </div>
+        <mat-divider inset="true" style="margin-right: 16px;" />
+        <mat-card-content>
+          <table-page></table-page>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <hr>
+
+  <p class="body-medium-default">Components</p>
+  <p><a href="/badge">Badge</a></p>
+  <p><a href="/button">Button</a></p>
+  <p><a href="/radio">Radio button</a></p>
+  <p><a href="/breadcrumb">Breadcrumb</a></p>
+  <p><a href="/card">Card</a></p>
+  <p><a href="/checkbox">Checkbox</a></p>
+  <p><a href="/chips">Chips</a></p>
+  <p><a href="/dialog">Dialog</a></p>
+  <p><a href="/menu">Menu</a></p>
+  <p><a href="/navigation-drawer">Navigation Drawer</a></p>
+  <p><a href="/navigation-rail">Navigation Rail</a></p>
+  <p><a href="/progress-indicators">Progress Indicators</a></p>
+  <p><a href="/switch">Switch (Slide toggle)</a></p>
+  <p><a href="/select">Select</a></p>
+  <p><a href="/sidesheet">Sidesheet</a></p>
+  <p><a href="/tabs">Tabs</a></p>
+  <p><a href="/input">Text field, Textarea, input</a></p>
+  <p><a href="/form-field">Form Field</a></p>
+  <p><a href="/table">Table</a></p>
+  <p><a href="/tooltip">Tooltip</a></p>
+  <p><a href="/top-app-bar">Top App Bar</a></p>
+  <p><a href="/user-profile">User Profile</a></p>

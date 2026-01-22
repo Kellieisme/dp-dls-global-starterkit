@@ -1,0 +1,104 @@
+mat-card {
+  padding: var(--foundation-spacing-md, 16px);
+  padding-bottom: 0;
+}
+
+mat-divider {
+  margin-top: var(--foundation-spacing-md, 16px);
+  padding-bottom: var(--foundation-spacing-sm, 12px);
+  position: relative;
+}
+
+.title-high {
+  margin: var(--foundation-spacing-md, 16px) 0;
+}
+
+.typography-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--foundation-spacing-xs);
+}
+
+.typography-card-grid-2 {
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.typography-card-grid-3 {
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.typography-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--foundation-sizing-xs, 8px);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--foundation-sizing-m, 16px);
+  }
+}
+
+.heading-section .typography-details {
+  @media (min-width: 768px) {
+    grid-template-columns: auto 1fr;
+    gap: var(--foundation-sizing-l, 24px);
+    
+    .typography-details-column:last-child {
+      justify-self: end;
+      padding-right: 10px;
+    }
+  }
+}
+
+.title-section .typography-details,
+.label-section .typography-details {
+  @media (min-width: 768px) {
+    grid-template-columns: auto 1fr;
+    gap: var(--foundation-sizing-l, 24px);
+    
+    .typography-details-column:last-child {
+      justify-self: end;
+      padding-right: 10px;
+    }
+  }
+}
+
+.typography-details-column {
+  display: grid;
+  grid-template-columns: minmax(100px, auto) 1fr;
+  row-gap: var(--foundation-sizing-xs, 8px);
+  column-gap: var(--foundation-sizing-s, 12px);
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: auto 1fr;
+    row-gap: var(--foundation-sizing-xs, 8px);
+    column-gap: var(--foundation-sizing-s, 12px);
+  }
+
+  p {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+.row-cols-2 {
+  align-items: center;
+}
+
+.typography-details-column .label-lowest2 {
+  margin: 0;
+  text-align: right;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
