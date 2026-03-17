@@ -28,10 +28,18 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              { "glob": "svgSet.svg", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/", "output": "./assets" },
-              { "glob": "**/*", "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/fonts/", "output": "./assets" }            ],
-            "styles":[
-              "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/fonts.scss",
+              {
+                "glob": "svgSet.svg",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/icons/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@jeppesen-foreflight/dls-global-assets/dist/images/fonts/",
+                "output": "./assets"
+              }
+            ],
+            "styles": [
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
               "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/material.scss",
               "src/styles.scss"
