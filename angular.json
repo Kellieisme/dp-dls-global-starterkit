@@ -72,6 +72,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "prebundle": {
+              "exclude": ["@jeppesen-foreflight/dp-dls-global-angular"]
+            }
+          },
           "configurations": {
             "production": {
               "buildTarget": "starterkit:build:production"
