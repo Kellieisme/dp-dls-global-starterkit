@@ -16,7 +16,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { Template2Component } from '../template-2/template-2.component';
 import { Template3Component } from '../template-3/template-3.component';
-import { Template4Component } from '../template-4/template-4.component';
 
 @Component({
   selector: 'app-main-nav',
@@ -151,11 +150,6 @@ export class MainNavComponent {
         label: 'template-3',
         icon: 'verified',
         route: '/template-3',
-      },
-      { 
-        label: 'template-4',
-        icon: 'verified',
-        route: '/template-4',
       }
   ];
 
